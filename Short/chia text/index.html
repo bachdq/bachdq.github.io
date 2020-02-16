@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>TEXT</h1>
+
+    <script>
+        var textWrapper = document.querySelector("h1");
+        textWrapper.innerHTML = textWrapper.textContent.replace(
+            /([^\x00-\x80]|\w)/g,
+            "<span class='letter'>$&</span>"
+        );
+    </script>
+</body>
+</html>
